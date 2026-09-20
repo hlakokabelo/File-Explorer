@@ -22,10 +22,11 @@ export function FileExplorer() {
         <button
           type="button"
           onClick={() => setIsOpen(true)}
+          value={"l"}
           aria-label="Show explorer"
-          className="flex h-8 w-8 items-center justify-center rounded-md text-slate-500 transition hover:bg-slate-100 hover:text-slate-800"
+          className="cursor-pointer flex h-8 w-8 items-center justify-center rounded-md text-green-500 transition hover:text-green-800"
         >
-          <PanelLeftOpen size={16} />
+          <PanelLeftOpen size={20} />
         </button>
       </div>
     );
@@ -42,9 +43,9 @@ export function FileExplorer() {
           type="button"
           onClick={() => setIsOpen(false)}
           aria-label="Hide explorer"
-          className="flex h-7 w-7 items-center justify-center rounded-md text-slate-400 transition hover:bg-slate-100 hover:text-slate-700"
+          className="cursor-pointer flex h-7 w-7 text-red-500 items-center justify-center rounded-md transition hover:text-red-700"
         >
-          <PanelLeftClose size={16} />
+          <PanelLeftClose size={20} />
         </button>
       </div>
 
