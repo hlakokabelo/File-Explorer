@@ -58,7 +58,7 @@ export default function FileViewer() {
       >
         <X size={16} strokeWidth={2.5} />
       </button>
-      <h1 className=" rounded-2xl border bg-amber-50 p-3">
+      <h1 className=" rounded-2xl overflow-auto border bg-amber-50 p-3 pr-1.5 font-semibold ">
         {cleanPath}
         <span className="text-red-500">{fileName}</span>
       </h1>
