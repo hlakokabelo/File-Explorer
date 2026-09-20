@@ -58,7 +58,7 @@ export default function FileViewer() {
 
       <div className="h-full  overflow-auto">
         {extension === "md" && (
-          <div className="prose">
+          <div className="prose max-w-none p-6">
             <Markdown>{content}</Markdown>
           </div>
         )}
@@ -74,7 +74,7 @@ export default function FileViewer() {
         )}
 
         {isOther && (
-          <div className="prose">
+          <div className="prose w-fit">
             <ReactMarkdown>{content}</ReactMarkdown>
           </div>
         )}
