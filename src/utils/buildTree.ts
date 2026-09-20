@@ -4,7 +4,7 @@ export function buildTree(paths: string[]): FileNode[] {
   const root: FileNode[] = [];
 
   for (const path of paths) {
-    const cleanPath = path.replace("/src/data/", "");
+    const cleanPath = path.replace("/data/", "");
     const parts = cleanPath.split("/");
 
     let current = root;

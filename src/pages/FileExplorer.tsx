@@ -4,7 +4,7 @@ import { useFileStore } from "../store/file";
 import { buildTree } from "../utils/buildTree";
 import { PanelLeftClose, PanelLeftOpen } from "lucide-react";
 
-const fileModules = import.meta.glob<string>("/src/data/**/*", {
+const fileModules = import.meta.glob<string>("/src/../data/**/*", {
   query: "?raw",
   import: "default",
 });
