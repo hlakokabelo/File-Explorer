@@ -5,9 +5,7 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { X } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 
-export interface IFileViewerProps {}
-
-export default function FileViewer(props: IFileViewerProps) {
+export default function FileViewer() {
   const [content, setContent] = useState("");
 
   const fileModules = useFileStore((state: any) => state.fileModules);
@@ -42,7 +40,9 @@ export default function FileViewer(props: IFileViewerProps) {
   );
   const isOther = extension.includes("/"); // has no extention
 
-  const handleClose = () => {};
+  const handleClose = () => {
+    setFilePath(""); // Clear the file path to close the viewer
+  };
 
   return (
     <div className="h-full relative w-full">
