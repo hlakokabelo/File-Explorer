@@ -32,6 +32,9 @@ export default function FileViewer() {
   if (!filePath) return null;
 
   const extension = filePath.split(".").pop();
+  const fileName = filePath.split("/").pop();
+  const cleanPath = filePath.replace("/data", "").replace(fileName ?? "", "");
+
   const isImage = ["png", "jpg", "jpeg", "webp", "gif", "svg"].includes(
     extension ?? "",
   );
@@ -51,12 +54,15 @@ export default function FileViewer() {
         type="button"
         onClick={handleClose}
         aria-label="Close file"
-        className="cursor-pointer absolute right-3 top-3 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white/80 text-slate-500 shadow-sm ring-1 ring-slate-200 backdrop-blur transition hover:bg-red-500 hover:text-slate-800 hover:shadow"
+        className="cursor-pointer absolute right-3 top-2 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white/80 text-slate-500 shadow-sm ring-1 ring-slate-200 backdrop-blur transition hover:bg-red-500 hover:text-slate-800 hover:shadow"
       >
         <X size={16} strokeWidth={2.5} />
       </button>
-
-      <div className="h-full  overflow-auto">
+      <h1 className=" rounded-2xl border bg-amber-50 p-3">
+        {cleanPath}
+        <span className="text-red-500">{fileName}</span>
+      </h1>
+      <div className="h-16/17 border mt-2 p-2 pl-3 rounded-2xl bg-white overflow-auto">
         {extension === "md" && (
           <div className="prose max-w-none p-6">
             <Markdown>{content}</Markdown>

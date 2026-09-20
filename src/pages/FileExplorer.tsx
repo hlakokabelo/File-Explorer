@@ -22,7 +22,6 @@ export function FileExplorer() {
         <button
           type="button"
           onClick={() => setIsOpen(true)}
-          value={"l"}
           aria-label="Show explorer"
           className="cursor-pointer flex h-8 w-8 items-center justify-center rounded-md text-green-500 transition hover:text-green-800"
         >
@@ -33,7 +32,7 @@ export function FileExplorer() {
   }
 
   return (
-    <div className="relative flex h-full w-72 shrink-0 flex-col border-r border-slate-200 bg-white">
+    <div className="relative flex h-full overflow-scroll w-fit max-w-72 sm:max-w-fit sm:min-w-72 shrink-0 flex-col border-r border-slate-200 bg-white">
       {/* Header row with hide button */}
       <div className="flex items-center justify-between border-b border-slate-200 px-3 py-2">
         <span className="text-xs font-semibold uppercase tracking-wider text-slate-500">
