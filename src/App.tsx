@@ -30,10 +30,23 @@ function App() {
             type="button"
             onClick={() => setExplorerOpen(true)}
             aria-label="Open explorer"
-            className="absolute
-             text-green-500 left-3 top-3 z-20 flex h-9 w-9 items-center justify-center rounded-lg border border-green-500 bg-white shadow-sm transition hover:bg-slate-100 hover:text-slate-900"
+            className="
+      absolute left-0 top-1/2 z-20
+      flex h-16 w-5 -translate-y-1/2
+      items-center justify-center
+      rounded-r-lg
+      cursor-pointer
+      border border-l-0 border-green-500
+      bg-white
+      text-green-500
+      shadow-sm
+      transition
+      hover:w-7
+      hover:bg-green-50
+      hover:text-green-700
+    "
           >
-            <PanelLeftOpen size={19} />
+            <PanelLeftOpen size={16} />
           </button>
         )}
         <FileViewer />
